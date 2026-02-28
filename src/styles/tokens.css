@@ -1,0 +1,129 @@
+/* ================================================================
+   DESIGN TOKENS  |  ui-design-system/src/styles/tokens.css
+   Single source of truth for all visual design decisions.
+   ================================================================ */
+
+:root {
+  /* ---- Colors: Dark Theme (Default) ---- */
+  --bg-page:        #0c0d14;
+  --bg-surface:     #12131e;
+  --bg-elevated:    #181928;
+  --bg-hover:       #1e2030;
+  --bg-active:      #242640;
+
+  --border-color:        #252640;
+  --border-subtle:       #1a1b2e;
+  --border-strong:       #363860;
+
+  --accent:          #ff4757;
+  --accent-hover:    #ff6b7a;
+  --accent-muted:    rgba(255, 71, 87, 0.14);
+  --accent-glow:     0 0 28px rgba(255, 71, 87, 0.28);
+
+  --text-primary:    #f0eef8;
+  --text-secondary:  #8b8aac;
+  --text-muted:      #4e4d6a;
+  --text-inverse:    #0c0d14;
+
+  --color-success:   #2dd4a4;
+  --color-warning:   #f5c842;
+  --color-danger:    #ff4757;
+  --color-info:      #4da8ff;
+
+  --success-muted:   rgba(45, 212, 164, 0.14);
+  --warning-muted:   rgba(245, 200, 66, 0.14);
+  --danger-muted:    rgba(255, 71, 87, 0.14);
+  --info-muted:      rgba(77, 168, 255, 0.14);
+
+  /* ---- Typography ---- */
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'Manrope', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --text-xs:    0.6875rem;   /* 11px */
+  --text-sm:    0.8125rem;   /* 13px */
+  --text-base:  0.9375rem;   /* 15px */
+  --text-md:    1.0625rem;   /* 17px */
+  --text-lg:    1.25rem;     /* 20px */
+  --text-xl:    1.5rem;      /* 24px */
+  --text-2xl:   2rem;        /* 32px */
+  --text-3xl:   2.75rem;     /* 44px */
+
+  --weight-normal:  400;
+  --weight-medium:  500;
+  --weight-semibold:600;
+  --weight-bold:    700;
+  --weight-extrabold:800;
+
+  /* ---- Spacing ---- */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+
+  /* ---- Borders & Radius ---- */
+  --radius-xs:   3px;
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-pill: 999px;
+
+  /* ---- Shadows ---- */
+  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.45);
+  --shadow-md:  0 4px 18px rgba(0, 0, 0, 0.55);
+  --shadow-lg:  0 12px 40px rgba(0, 0, 0, 0.65);
+
+  /* ---- Motion ---- */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-spring:cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast:   110ms;
+  --duration-normal: 220ms;
+  --duration-slow:   380ms;
+
+  /* ---- Layout ---- */
+  --sidebar-w: 228px;
+  --panel-w:   288px;
+  --header-h:  54px;
+}
+
+/* ================================================================
+   LIGHT THEME OVERRIDES
+   ================================================================ */
+[data-theme="light"] {
+  --bg-page:    #f4f4f8;
+  --bg-surface: #ffffff;
+  --bg-elevated:#ebebf2;
+  --bg-hover:   #e4e4ee;
+  --bg-active:  #dddded;
+
+  --border-color:  #dcdcec;
+  --border-subtle: #eaeaf4;
+  --border-strong: #c8c8dc;
+
+  --accent:       #d63648;
+  --accent-hover: #bf2d3e;
+  --accent-muted: rgba(214, 54, 72, 0.1);
+  --accent-glow:  0 0 20px rgba(214, 54, 72, 0.2);
+
+  --text-primary:   #13121e;
+  --text-secondary: #565574;
+  --text-muted:     #9e9db8;
+  --text-inverse:   #ffffff;
+
+  --color-success: #1aab80;
+  --color-warning: #c49a00;
+  --color-danger:  #d63648;
+  --color-info:    #2277d4;
+
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 18px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.14);
+}

@@ -1,0 +1,54 @@
+/* src/components/ui/Checkbox/Checkbox.module.css */
+
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.wrapper--disabled { opacity: 0.5; pointer-events: none; }
+
+.control { position: relative; display: flex; }
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 0; height: 0;
+}
+
+.box {
+  width: 18px; height: 18px;
+  border-radius: var(--radius-xs);
+  border: 1.5px solid var(--border-strong);
+  background: var(--bg-elevated);
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 700;
+  transition: all var(--duration-fast);
+  flex-shrink: 0;
+}
+
+.input:checked + .box,
+.input:indeterminate + .box {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.input:focus-visible + .box {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.wrapper:hover .box {
+  border-color: var(--accent);
+}
+
+.label {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}

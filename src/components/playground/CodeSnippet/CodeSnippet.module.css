@@ -1,0 +1,97 @@
+/* src/components/playground/CodeSnippet/CodeSnippet.module.css */
+
+.wrapper {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  background: var(--bg-page);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dots { display: flex; gap: 5px; }
+.dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+.dots .dot:nth-child(1) { background: #ff5f57; }
+.dots .dot:nth-child(2) { background: #febc2e; }
+.dots .dot:nth-child(3) { background: #28c840; }
+
+.filename {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  flex: 1;
+  text-align: center;
+}
+
+.copyBtn {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xs);
+  padding: 3px 10px;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+  white-space: nowrap;
+}
+.copyBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+  background: var(--bg-hover);
+}
+.copyBtn--copied {
+  color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.pre {
+  margin: 0;
+  padding: var(--sp-4) 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  padding: 0 var(--sp-4);
+  min-height: 1.7em;
+}
+.line:hover { background: var(--bg-elevated); }
+
+.lineNum {
+  color: var(--text-muted);
+  user-select: none;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: right;
+  font-size: 0.65rem;
+  padding-top: 0.15em;
+}
+
+/* Syntax tokens */
+:global(.tok-tag)    { color: var(--accent); }
+:global(.tok-name)   { color: #ff9f7a; }
+:global(.tok-prop)   { color: #7ab8ff; }
+:global(.tok-string) { color: #a5e075; }
+:global(.tok-brace)  { color: var(--text-muted); }
+:global(.tok-expr)   { color: #e8c97a; }
+:global(.tok-kw)     { color: #c79bf0; }

@@ -1,0 +1,49 @@
+/* src/App.module.css */
+
+.shell {
+  display: grid;
+  grid-template-rows: var(--header-h) 1fr;
+  grid-template-columns: var(--sidebar-w) 1fr var(--panel-w);
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-page);
+}
+
+.main {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg-page);
+}
+
+/* Empty props panel */
+.emptyPanel {
+  background: var(--bg-surface);
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-8);
+}
+
+.emptyInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: var(--text-xl);
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+.emptyText {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 160px;
+}

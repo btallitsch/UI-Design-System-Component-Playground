@@ -1,0 +1,64 @@
+/* src/components/ui/Badge/Badge.module.css */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-weight: var(--weight-medium);
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Sizes */
+.badge--sm { font-size: 0.6rem; padding: 2px 7px; }
+.badge--md { font-size: var(--text-xs); padding: 3px 10px; }
+
+/* Variants */
+.badge--default {
+  background: var(--bg-elevated);
+  border-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.badge--success {
+  background: var(--success-muted);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.badge--warning {
+  background: var(--warning-muted);
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.badge--danger {
+  background: var(--danger-muted);
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.badge--info {
+  background: var(--info-muted);
+  border-color: var(--color-info);
+  color: var(--color-info);
+}
+
+/* Dot indicator */
+.dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
